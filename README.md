@@ -33,9 +33,11 @@ python train_model.py --dataset=origin  --seed=1 --ratio=0.05
 #### Training With Gradient Restriction Loss
 
 The *Gradient Restriction* (GR) loss is
+
 $$
 \ell_{GR}(x,\theta)=\ell(z,\theta)+\alpha *||\nabla_{\theta}\ell(z,\theta)||_2
 $$
+
 We can use the GR loss by setting parameter `model_fix_flag` to 1. You can specify the value of coefficient $\alpha$.
 
 ```bash
